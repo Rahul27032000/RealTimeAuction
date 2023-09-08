@@ -1,0 +1,23 @@
+# Node.js and TypeScript specific
+node_modules/
+# Dist folder, exclude map files
+dist/**/*.map
+*.log
+*.tsbuildinfo
+
+# Environment variables
+.env
+
+# Editor/IDE specific
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Dependency directories
+pnpm-lock.yaml
+yarn.lock
