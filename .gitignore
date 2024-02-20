@@ -21,3 +21,4 @@ Thumbs.db
 # Dependency directories
 pnpm-lock.yaml
 yarn.lock
+dist/
