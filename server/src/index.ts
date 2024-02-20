@@ -1,9 +1,8 @@
 import app from "./app";
-import dotenv from "dotenv";
-dotenv.config();
-
-const port = process.env.PORT || 3000;
+import { config } from "./config/config";
+const port = config.port;
 
 app.listen(port, () => {
+  config.db();
   console.log(`Server listening on ${port}`);
 });
