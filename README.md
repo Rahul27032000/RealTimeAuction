@@ -38,6 +38,14 @@ Install dependencies
 Start the server
 
 ```bash
+  cd server/
+  npm run dev
+```
+
+Start the client
+
+```bash
+  cd client/
   npm run dev
 ```
 
