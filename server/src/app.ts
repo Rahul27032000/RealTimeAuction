@@ -23,6 +23,7 @@ app.get<{}, MessageResponse>("/", (req: Request, res: Response) => {
 
 app.use("api/v1", router);
 app.use(notFound);
+
 app.use(errorHandler);
 
 export default app;
