@@ -4,11 +4,8 @@ const userSchema = new Schema({
   username: { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },
   isAdmin: { type: Boolean, default: false },
-  authentication: {
-    password: { type: String, required: true, select: false },
-    salt: { type: String, select: false },
-    sessionToken: { type: String, select: false },
-  },
+  password: { type: String, required: true, select: false },
+  sessionToken: { type: String, select: false },
 });
 
 export const UserModel = model("User", userSchema);
@@ -33,7 +30,7 @@ export const createUser = (values: Record<string, any>) =>
 
 export const getUserBySessionToken = (sessionToken: string) =>
   UserModel.findOne({
-    "authentication.sessionToken": sessionToken,
+    sessionToken: sessionToken,
   });
 
 export const isAdmin = (id: string) =>
